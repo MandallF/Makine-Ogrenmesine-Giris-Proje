@@ -93,6 +93,16 @@ Hata Payı (MAE): 0.2851 kW
 
 <img width="923" height="530" alt="image" src="https://github.com/user-attachments/assets/7603a07e-c5bb-4805-aa1f-7b2a4f23407a" />
 
+Sonuçlarda da görüldüğü üzere Modelimiz, karmaşık insan davranışlarını ve hava durumu etkilerini %56 oranında başarıyla modellemiştir. Ortalama hata payımız 0.28 kW seviyesindedir. Bu, modelin genel tüketim trendlerini (sabah/akşam döngüsü, sıcaklık etkisi) başarıyla öğrendiğini, ancak gürültü değerlerinde zorlandığını göstermektedir.
+
+Burada ileri dönemlerde bunu yükseltebilmek amacıyla pivot işlemini alırken Baseline'ı sadece Saat (Hour) bazında aldık. Bunu Saat + Hava Durumu veya Saat + Hafta Günü kombinasyonuna çevirirsek Pivot daha akıllı olabilir diye düşünüyorum. 
+
+Mantıken bu sayede model şöyle düşünebilir: 
+
+"Saat 14:00" ortalamasına bakmak yerine; "Pazar günü Saat 14:00" ortalamasına bakarsa (çünkü pazar evde herkes vardır), Baseline çok daha hassas olur ve $R^2$ artar.
+
+Yani sadece saat değil de saat + gün üzerinden bir Baseline (pivot) oluşturup böyle modele eğitsek bu gürültü değerlerini de kaçırmaz diye düşünüyorum.
+
 ------------------------------
 
 AD-Soyad: Kubilay İnanç
