@@ -122,7 +122,7 @@ Final Hata Payı (MAE): 0.3433 kW
 
 <img width="933" height="530" alt="image" src="https://github.com/user-attachments/assets/f32e0144-3f3a-4443-9f5e-d8a02e5d7884" />
 
-Bu şekilde bir sonuç aldım ve görüldüğü üzere modelde bir gelişme gerçekleşti. Değiştirilmiş dosyalar: Depoda (saat+gün+ay) olarak adlandırdım.
+Bu şekilde bir sonuç aldım ve görüldüğü üzere modelde ufak bir gelişme gerçekleşti ve önemli olan girdiler de değişti. Değiştirilmiş dosyalar: Depoda (saat+gün+ay) olarak adlandırdım.
 
 ------------------------------
 
