@@ -100,7 +100,7 @@ Burada bunu yükseltebilmek amacıyla pivot işlemini alırken Baseline'ı sadec
 
 Mantıken bu sayede model şöyle düşünebilir: 
 
-"Saat 14:00" ortalamasına bakmak yerine; "Pazar günü Saat 14:00" ortalamasına bakarsa (çünkü pazar evde herkes vardır) ve yazın güneş daha uzun süreler kaldığı için daha az kullanım yapılır, Baseline çok daha hassas olur ve $R^2$ artar.
+"Saat 14:00" ortalamasına bakmak yerine; "Ocak ayı Pazar günü Saat 14:00" ortalamasına bakarsa (çünkü pazar evde herkes vardır) ve aylara göre güneş süreleri değiştiği için değişiklik olur, Baseline çok daha hassas olur ve $R^2$ artar.
 
 Yani sadece saat değil de saat + gün + ay üzerinden bir Baseline (pivot) oluşturup böyle modele eğitsek bu gürültü değerlerini de kaçırmaz diye düşünüyorum. Sonuç olarak:
 
@@ -120,7 +120,8 @@ Final Hata Payı (MAE): 0.3433 kW
 
 ----------------------------------------
 
-<img width="933" height="530" alt="image" src="https://github.com/user-attachments/assets/f32e0144-3f3a-4443-9f5e-d8a02e5d7884" />
+<img width="939" height="533" alt="image" src="https://github.com/user-attachments/assets/3d503145-ca72-4b00-ad72-f7bdc7dd4b01" />
+
 
 Bu şekilde bir sonuç aldım ve görüldüğü üzere modelde ufak bir gelişme gerçekleşti ve önemli olan girdiler de değişti. Değiştirilmiş dosyalar: Depoda (saat+gün+ay) olarak adlandırdım.
 
