@@ -71,29 +71,30 @@ Veri başarıyla yüklendi!
 Pivot işlemi tamamlandı. Baseline özelliği eklendi.
 
                  time  use [kW]  Hourly_Baseline
-0 2016-01-01 05:00:00  0.932833         0.801527
+0 2016-01-01 05:00:00  0.932833         0.926559
 
-1 2016-01-01 05:00:01  0.934333         0.801527
+1 2016-01-01 05:00:01  0.934333         0.926559
 
-2 2016-01-01 05:00:02  0.931817         0.801527
+2 2016-01-01 05:00:02  0.931817         0.926559
 
-3 2016-01-01 05:00:03  1.022050         0.801527
+3 2016-01-01 05:00:03  1.022050         0.926559
 
-4 2016-01-01 05:00:04  1.139400         0.801527
+4 2016-01-01 05:00:04  1.139400         0.926559
 
 Model eğitiliyor... (Bu işlem verinin boyutuna göre biraz sürebilir)
 
 ------------------------------
 
-Model R2 Skoru: 0.5630
+Model R2 Skoru: 0.5567
 
-Hata Payı (MAE): 0.2851 kW
+Hata Payı (MAE): 0.3437 kW
 
 ------------------------------
 
-<img width="923" height="530" alt="image" src="https://github.com/user-attachments/assets/7603a07e-c5bb-4805-aa1f-7b2a4f23407a" />
+<img width="919" height="533" alt="image" src="https://github.com/user-attachments/assets/10649f95-415e-4a6b-b15b-c0ed575762ec" />
 
-Sonuçlarda da görüldüğü üzere Modelimiz, karmaşık insan davranışlarını ve hava durumu etkilerini %56 oranında başarıyla modellemiştir. Ortalama hata payımız 0.28 kW seviyesindedir. Bu, modelin genel tüketim trendlerini (sabah/akşam döngüsü, sıcaklık etkisi) başarıyla öğrendiğini, ancak gürültü değerlerinde zorlandığını göstermektedir.
+
+Sonuçlarda da görüldüğü üzere Modelimiz, karmaşık insan davranışlarını ve hava durumu etkilerini %55 oranında başarıyla modellemiştir. Ortalama hata payımız 0.34 kW seviyesindedir. Bu, modelin genel tüketim trendlerini (sabah/akşam döngüsü, sıcaklık etkisi) başarıyla öğrendiğini, ancak gürültü değerlerinde zorlandığını göstermektedir.
 
 Burada bunu yükseltebilmek amacıyla pivot işlemini alırken Baseline'ı sadece Saat (Hour) bazında aldık. Bunu Saat + Hafta Günü + ay kombinasyonuna çevirirsek Pivot daha akıllı olabilir diye düşünüyorum. 
 
