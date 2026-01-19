@@ -95,13 +95,33 @@ Hata Payı (MAE): 0.2851 kW
 
 Sonuçlarda da görüldüğü üzere Modelimiz, karmaşık insan davranışlarını ve hava durumu etkilerini %56 oranında başarıyla modellemiştir. Ortalama hata payımız 0.28 kW seviyesindedir. Bu, modelin genel tüketim trendlerini (sabah/akşam döngüsü, sıcaklık etkisi) başarıyla öğrendiğini, ancak gürültü değerlerinde zorlandığını göstermektedir.
 
-Burada ileri dönemlerde bunu yükseltebilmek amacıyla pivot işlemini alırken Baseline'ı sadece Saat (Hour) bazında aldık. Bunu Saat + Hava Durumu veya Saat + Hafta Günü kombinasyonuna çevirirsek Pivot daha akıllı olabilir diye düşünüyorum. 
+Burada bunu yükseltebilmek amacıyla pivot işlemini alırken Baseline'ı sadece Saat (Hour) bazında aldık. Bunu Saat + Hafta Günü + ay kombinasyonuna çevirirsek Pivot daha akıllı olabilir diye düşünüyorum. 
 
 Mantıken bu sayede model şöyle düşünebilir: 
 
-"Saat 14:00" ortalamasına bakmak yerine; "Pazar günü Saat 14:00" ortalamasına bakarsa (çünkü pazar evde herkes vardır), Baseline çok daha hassas olur ve $R^2$ artar.
+"Saat 14:00" ortalamasına bakmak yerine; "Pazar günü Saat 14:00" ortalamasına bakarsa (çünkü pazar evde herkes vardır) ve yazın güneş daha uzun süreler kaldığı için daha az kullanım yapılır, Baseline çok daha hassas olur ve $R^2$ artar.
 
-Yani sadece saat değil de saat + gün üzerinden bir Baseline (pivot) oluşturup böyle modele eğitsek bu gürültü değerlerini de kaçırmaz diye düşünüyorum.
+Yani sadece saat değil de saat + gün + ay üzerinden bir Baseline (pivot) oluşturup böyle modele eğitsek bu gürültü değerlerini de kaçırmaz diye düşünüyorum. Sonuç olarak:
+
+Veri başarıyla yüklendi!
+
+Zaman verileri dönüştürülüyor ve temizleniyor...
+
+Mevsimsel Baseline eklendi.
+
+Model eğitiliyor...
+
+----------------------------------------
+
+Final R2 Skoru: 0.5655
+
+Final Hata Payı (MAE): 0.3433 kW
+
+----------------------------------------
+
+<img width="933" height="530" alt="image" src="https://github.com/user-attachments/assets/f32e0144-3f3a-4443-9f5e-d8a02e5d7884" />
+
+Bu şekilde bir sonuç aldım ve görüldüğü üzere modelde bir gelişme gerçekleşti. Değiştirilmiş dosyalar: Depoda (saat+gün+ay) olarak adlandırdım.
 
 ------------------------------
 
